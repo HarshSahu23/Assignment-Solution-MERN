@@ -9,23 +9,26 @@
         height: 100vh;
       }
       table {
-        width: auto; /* Adjust the table width as needed */
-        margin: 0 auto; /* Center the table horizontally */
-        border-collapse: collapse; /* Collapse borders between cells */
+        width: auto;
+        margin: 0 auto;
+        border-collapse: collapse;
         table-layout: fixed;
       }
 
       td {
-        border: 1px solid #333; /* Add a border to table cells */
-        padding: 1px; /* Add padding for spacing */
+        border: 1px solid #333;
+        padding: 1px;
       }
       td#custom {
         padding: none;
         width: 448px;
       }
+      td#custom2 {
+        text-align: right;
+      }
 
       label {
-        display: block; /* Display labels as block elements */
+        display: block;
         font-weight: 700;
         text-align: center;
       }
@@ -35,166 +38,183 @@
       }
       .radio-label {
         display: inline;
-        font-weight: normal; /* Remove bold for radio button labels */
-        color: #555; /* Customize the color */
+        font-weight: normal;
+        color: #555;
       }
       input#AddressCustom {
         width: 200px;
         height: 60px;
       }
-      /* input {
-        width: 95%;
-      } */
+      .center-button {
+        text-align: center;
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
     <div id="RegTable">
       <h1>Registration Form</h1>
-      <table>
-        <tr>
-          <td>
-            <label for="FirstName">First Name :</label>
-          </td>
-          <td>
-            <input type="text" id="FirstName" name="FirstName" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="LastName">Last Name :</label>
-          </td>
-          <td>
-            <input type="text" id="LastName" name="LastName" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="Email">Email :</label>
-          </td>
-          <td>
-            <input type="email" id="Email" name="Email" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="Password">Password</label>
-          </td>
-          <td>
-            <input type="password" id="Password" name="Password" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="ReEnterPasw">Re-enter Password</label>
-          </td>
-          <td>
-            <input type="password" id="ReEnterPasw" name="ReEnterPasw" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label>Gender:</label>
-          </td>
-          <td>
-            <input type="radio" id="male" name="gender" value="male" />
-            <label for="male" class="radio-label">Male</label>
-            <br />
-            <input type="radio" id="female" name="gender" value="female" />
-            <label for="female" class="radio-label">Female</label>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="Age">Age</label>
-          </td>
-          <td>
-            <input type="number" id="Age" name="Age" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="Phone">Phone number</label>
-          </td>
-          <td>
-            <input type="tel" id="Phone" name="Phone" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="AddressCustom">Address </label>
-          </td>
-          <td>
-            <input type="text" id="AddressCustom" name="Address" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="State">State </label>
-          </td>
-          <td>
-            <input type="text" id="State" name="State" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="Country">Country</label>
-          </td>
-          <td>
-            <select id="Country" name="Country">
-              <option value="null" selected>Choose your country</option>
-              <option value="Australia">Australia</option>
-              <option value="India">India</option>
-              <option value="United Kingdom">United Kingdom</option>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <label for="LangKnown">Languages Knows </label>
-          </td>
-          <td>
-            <input
-              type="checkbox"
-              id="knowsEnglish"
-              name="English"
-              value="English"
-            />
-            <label for="knowsEnglish" class="radio-label">English</label>
-            <input type="checkbox" id="knowsHindi" name="Hindi" value="Hindi" />
-            <label for="knowsHindi" class="radio-label">Hindi</label>
-            <input
-              type="checkbox"
-              id="knowsMarathi"
-              name="Marathi"
-              value="Marathi"
-            />
-            <label for="knowsMarathi" class="radio-label">Marathi</label>
-            <input
-              type="checkbox"
-              id="knowsMalayalam"
-              name="Malayalam"
-              value="Malayalam"
-            />
-            <label for="knowsMalayalam" class="radio-label">Malayalam</label>
-          </td>
-        </tr>
-        <!-- Add more table rows as needed -->
-      </table>
-      <table>
-        <tr>
-          <td id="custom">
-            <input
-              type="checkbox"
-              id="confirmDetails"
-              name="confirmDetails"
-              value="yes"
-            />
-            <label for="confirmDetails" class="radio-label"
-              >Hereby I agree that all the given details are true</label
-            >
-          </td>
-        </tr>
-      </table>
+      <form action="/submit" method="post">
+        <table>
+          <tr>
+            <td>
+              <label for="FirstName">First Name :</label>
+            </td>
+            <td>
+              <input type="text" id="FirstName" name="FirstName" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="LastName">Last Name :</label>
+            </td>
+            <td>
+              <input type="text" id="LastName" name="LastName" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Email">Email :</label>
+            </td>
+            <td>
+              <input type="email" id="Email" name="Email" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Password">Password</label>
+            </td>
+            <td>
+              <input type="password" id="Password" name="Password" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ReEnterPasw">Re-enter Password</label>
+            </td>
+            <td>
+              <input type="password" id="ReEnterPasw" name="ReEnterPasw" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Gender:</label>
+            </td>
+            <td>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male" class="radio-label">Male</label>
+              <br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female" class="radio-label">Female</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Age">Age</label>
+            </td>
+            <td>
+              <input type="number" id="Age" name="Age" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Phone">Phone number</label>
+            </td>
+            <td>
+              <input type="tel" id="Phone" name="Phone" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="AddressCustom">Address </label>
+            </td>
+            <td>
+              <input type="text" id="AddressCustom" name="Address" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="State">State </label>
+            </td>
+            <td>
+              <input type="text" id="State" name="State" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="Country">Country</label>
+            </td>
+            <td>
+              <select id="Country" name="Country">
+                <option value="null" selected>Choose your country</option>
+                <option value="Australia">Australia</option>
+                <option value="India">India</option>
+                <option value="United Kingdom">United Kingdom</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="LangKnown">Languages Knows </label>
+            </td>
+            <td>
+              <input
+                type="checkbox"
+                id="knowsEnglish"
+                name="English"
+                value="English"
+              />
+              <label for="knowsEnglish" class="radio-label">English</label>
+              <input
+                type="checkbox"
+                id="knowsHindi"
+                name="Hindi"
+                value="Hindi"
+              />
+              <label for="knowsHindi" class="radio-label">Hindi</label>
+              <input
+                type="checkbox"
+                id="knowsMarathi"
+                name="Marathi"
+                value="Marathi"
+              />
+              <label for="knowsMarathi" class="radio-label">Marathi</label>
+              <input
+                type="checkbox"
+                id="knowsMalayalam"
+                name="Malayalam"
+                value="Malayalam"
+              />
+              <label for="knowsMalayalam" class="radio-label">Malayalam</label>
+            </td>
+          </tr>
+          <!-- Add more table rows as needed -->
+        </table>
+        <table>
+          <tr>
+            <td id="custom">
+              <input
+                type="checkbox"
+                id="confirmDetails"
+                name="confirmDetails"
+                value="yes"
+              />
+              <label for="confirmDetails" class="radio-label"
+                >Hereby I agree that all the given details are true</label
+              >
+            </td>
+          </tr>
+          <tr>
+            <td id="custom2">
+              Log in to <a href="https://ethnus.com">Ethnus</a> website
+            </td>
+          </tr>
+        </table>
+
+        <div class="center-button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
     </div>
   </body>
 </html>
