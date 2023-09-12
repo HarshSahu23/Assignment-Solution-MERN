@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Task 2</title>
+    <style>
+      .NavBar1 {
+        width: 300px;
+        /* display: block; */
+      }
+      .NavBar1 .First {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #add9e6;
+        display: block;
+      }
+
+      .NavBar1 .First li a {
+        display: block;
+        color: blue;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      .NavBar1 .First li a:hover {
+        background-color: #555;
+        color: white;
+      }
+      .NavBar1 .First .active {
+        background-color: #fea500;
+        color: white;
+      }
+      .Second {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 420px;
+        overflow: hidden;
+        background-color: #d3d3d3;
+      }
+      .Second li {
+        float: left;
+        border-right: 2px solid blue;
+        width: 100px;
+      }
+      .Second li:last-child {
+        border-right: none;
+      }
+
+      .Second a {
+        display: block;
+        padding: 8px;
+        color: blue;
+        text-align: center;
+        padding: 16px 14px;
+        text-decoration: none;
+        font-size: larger;
+      }
+
+      .Second li a:hover {
+        background-color: green;
+      }
+      .Second .active {
+        background-color: #808080;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="NavBar1">
+      <ul class="First">
+        <li><a class="active" href="default.asp">Home</a></li>
+        <li><a href="https://www.java.com/en/" target="_blank">Java</a></li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
+        </li>
+        <li>
+          <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>
+        </li>
+      </ul>
+    </div>
+    <div style="height: 20px"></div>
+    <ul class="Second">
+      <li><a class="active" href="default.asp">Home</a></li>
+      <li><a href="https://www.java.com/en/" target="_blank">Java</a></li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>
+      </li>
+      <li>
+        <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a>
+      </li>
+    </ul>
+  </body>
+</html>
