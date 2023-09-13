@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Task 6</title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        display: grid;
+        place-content: center;
+      }
+      .avatar {
+        width: auto; /* Set the container width to 100% */
+        height: 280px;
+        overflow: hidden; /* Hide any content that overflows */
+        position: relative; /* Establish a positioning context */
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        margin-bottom: 0.4rem;
+      }
+      .avatar img {
+        width: auto; /* Set the image width to 100% of its container */
+        height: 256px; /* Maintain the image's aspect ratio */
+        display: block; /* Remove any inline spacing */
+      }
+      .container {
+        margin-top: 5rem;
+        height: 85vh;
+        width: 600px;
+      }
+      input.custom-input {
+        width: 590px;
+        height: 30px;
+        border: solid 0.7px #bbb;
+        border-radius: 0;
+        /* padding: 0px; */
+        padding-left: 10px;
+      }
+      label {
+        font-size: large;
+        font-weight: 700;
+      }
+      input.custom-input::placeholder {
+        padding: 5px; /* Add padding to the placeholder text */
+        color: #777; /* Customize the placeholder text color */
+      }
+      button.login {
+        background-color: #4cb050;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        height: 2rem;
+        width: 100%;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      button.cancel {
+        background-color: #f04336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        height: 2rem;
+        width: 5rem;
+        cursor: pointer;
+        font-size: 15px;
+        margin-left: 5px;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+      }
+      .form-group {
+        width: auto;
+      }
+      .forgor💀 {
+        width: 600px;
+        margin-top: 1rem;
+        display: flex;
+        background-color: #f1f1f1;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="avatar">
+        <img src="resource/woman.png" alt="woman" height="auto" width="auto" />
+      </div>
+      <div class="MyForm">
+        <form>
+          <div class="form-group">
+            <label for="Username">Username</label><br />
+            <input
+              class="custom-input"
+              type="text"
+              id="Username"
+              name="Username"
+              placeholder="Enter Username"
+              required
+            />
+            <br />
+            <br />
+            <label for="Password">Password</label><br />
+            <input
+              class="custom-input"
+              type="text"
+              id="Password"
+              name="Password"
+              placeholder="Enter Password"
+              required
+            />
+            <br /><br />
+            <button class="login">Login</button><br /><br />
+            <input
+              type="checkbox"
+              name="rememberme"
+              id="rememberme"
+              value="rememberme"
+            />
+            <label style="font-weight: normal">Remember me</label>
+          </div>
+          <div class="forgor💀">
+            <button class="cancel">Cancel</button><br /><br />
+            <a href="#forgot">Forgot <u>password?</u></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
