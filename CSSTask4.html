@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Task 4</title>
+    <style>
+      #mySidenav a {
+        position: absolute;
+        left: -80px;
+        transition: 0.3s;
+        padding: 15px;
+        width: 100px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        border-radius: 0 5px 5px 0;
+      }
+      #mySidenav a:hover {
+        left: 0; /* On mouse-over, make the elements appear as they should */
+      }
+
+      /* The about link: 20px from the top with a green background */
+      #about {
+        top: 20px;
+        background-color: #04aa6d;
+      }
+
+      #blog {
+        top: 80px;
+        background-color: #2196f3; /* Blue */
+      }
+
+      #projects {
+        top: 140px;
+        background-color: #f44336; /* Red */
+      }
+
+      #contact {
+        top: 200px;
+        background-color: #555; /* Light Black */
+      }
+      #Topic {
+        position: absolute;
+        left: 100px;
+        padding-left: 15px;
+        width: 500px;
+        /* align-items: flex-start; */
+      }
+      p {
+        margin-left: 5px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="#" id="about">About</a>
+      <a href="#" id="blog">Blog</a>
+      <a href="#" id="projects">Projects</a>
+      <a href="#" id="contact">Contact</a>
+    </div>
+    <div id="Topic">
+      <h1 style="margin: 5px">Hoverable Sidenav Buttons</h1>
+      <p>Hover over the buttons in the left side of navigation to open them</p>
+    </div>
+  </body>
+</html>
